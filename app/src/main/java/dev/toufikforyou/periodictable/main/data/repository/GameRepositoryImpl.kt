@@ -16,15 +16,15 @@ class GameRepositoryImpl : GameRepository {
         emit(GameState())
     }
 
-    override suspend fun saveGameState(state: GameState) {
+    override suspend fun saveGameState(gameState: GameState) {
         // Implement state saving logic
     }
-    
+
     private val sampleElements = listOf(
         // Period 1
         Element(1, "H", "Hydrogen", 1.008, "NONMETAL"),
         Element(2, "He", "Helium", 4.003, "NOBLE_GAS"),
-        
+
         // Period 2
         Element(3, "Li", "Lithium", 6.941, "ALKALI_METAL"),
         Element(4, "Be", "Beryllium", 9.012, "ALKALINE_EARTH_METAL"),

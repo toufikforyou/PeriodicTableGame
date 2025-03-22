@@ -27,10 +27,10 @@ fun GameScreen(
     val gameState by viewModel.gameState.collectAsState()
 
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.background)
-            .padding(24.dp), verticalArrangement = Arrangement.SpaceBetween
+            .padding(horizontal = 24.dp), verticalArrangement = Arrangement.SpaceBetween
     ) {
         GameTopBar(
             correctCount = gameState.correctPlacements,

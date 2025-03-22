@@ -8,10 +8,10 @@ import androidx.lifecycle.viewModelScope
 import dev.toufikforyou.periodictable.main.domain.model.Element
 import dev.toufikforyou.periodictable.main.domain.model.GameState
 import dev.toufikforyou.periodictable.main.domain.repository.GameRepository
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.delay
 
 class GameViewModel(
     private val repository: GameRepository
@@ -55,7 +55,7 @@ class GameViewModel(
         val element = currentElement
         if (element != null) {
             val isCorrect = element.atomicNumber == position
-            
+
             // Only update placedElements if correct
             val currentState = _gameState.value
             _gameState.value = currentState.copy(
@@ -65,7 +65,7 @@ class GameViewModel(
                 correctPlacements = currentState.correctPlacements + (if (isCorrect) 1 else 0),
                 wrongPlacements = currentState.wrongPlacements + (if (!isCorrect) 1 else 0)
             )
-            
+
             // Move to next element only if correct
             if (isCorrect) {
                 currentElementIndex++

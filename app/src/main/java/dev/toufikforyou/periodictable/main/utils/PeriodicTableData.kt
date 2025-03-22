@@ -13,8 +13,7 @@ object SpecialCells {
 val periodicTableRows = listOf(
     // Period 1
     PeriodicRow(
-        elements = mapOf(0 to 1, 17 to 2),
-        rowIndex = 0
+        elements = mapOf(0 to 1, 17 to 2), rowIndex = 0
     ),
     // Period 2
     PeriodicRow(
@@ -23,18 +22,24 @@ val periodicTableRows = listOf(
     ),
     // Period 3
     PeriodicRow(
-        elements = mapOf(0 to 11, 1 to 12, 12 to 13, 13 to 14, 14 to 15, 15 to 16, 16 to 17, 17 to 18),
-        rowIndex = 2
+        elements = mapOf(
+            0 to 11,
+            1 to 12,
+            12 to 13,
+            13 to 14,
+            14 to 15,
+            15 to 16,
+            16 to 17,
+            17 to 18
+        ), rowIndex = 2
     ),
     // Period 4
     PeriodicRow(
-        elements = (0..17).associateWith { it + 19 },
-        rowIndex = 3
+        elements = (0..17).associateWith { it + 19 }, rowIndex = 3
     ),
     // Period 5
     PeriodicRow(
-        elements = (0..17).associateWith { it + 37 },
-        rowIndex = 4
+        elements = (0..17).associateWith { it + 37 }, rowIndex = 4
     ),
     // Period 6
     PeriodicRow(
@@ -43,8 +48,7 @@ val periodicTableRows = listOf(
             1 to 56,  // Ba
             2 to SpecialCells.LANTHANIDES,  // Lanthanides indicator
             *((3..17).map { it to (it + 69) }.toTypedArray())  // Hf to Rn
-        ),
-        rowIndex = 5
+        ), rowIndex = 5
     ),
     // Period 7
     PeriodicRow(
@@ -53,8 +57,7 @@ val periodicTableRows = listOf(
             1 to 88,  // Ra
             2 to SpecialCells.ACTINIDES,  // Actinides indicator
             *((3..17).map { it to (it + 101) }.toTypedArray())  // Rf to Og
-        ),
-        rowIndex = 6
+        ), rowIndex = 6
     )
 )
 

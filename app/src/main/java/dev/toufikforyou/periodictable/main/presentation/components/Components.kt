@@ -22,7 +22,7 @@ fun EmptyCell() {
 fun EmptySpace() {
     Box(
         modifier = Modifier
-            .size(10.dp)
+            .size(2.dp)
             .background(Color.Transparent)
     )
 }

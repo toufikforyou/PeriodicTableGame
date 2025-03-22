@@ -38,9 +38,7 @@ fun ElementCell(
                 if (placedElement != null) MaterialTheme.colorScheme.primaryContainer
                 else getBackgroundColor(position).copy(alpha = 0.2f)
             )
-            .padding(4.dp),
-        contentAlignment = Alignment.Center
-    ) {
+            .padding(4.dp), contentAlignment = Alignment.Center) {
         Column(
             modifier = Modifier.fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -53,25 +51,26 @@ fun ElementCell(
                     color = ElementColors.Lanthanide,
                     fontWeight = FontWeight.Bold
                 )
+
                 SpecialCells.ACTINIDES -> Text(
                     text = "A",
                     fontSize = 16.sp,
                     color = ElementColors.Actinide,
                     fontWeight = FontWeight.Bold
                 )
+
                 else -> {
                     placedElement?.let { element ->
                         Text(
                             text = element.symbol,
-                            fontSize = 14.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = MaterialTheme.colorScheme.onPrimaryContainer
+                            style = MaterialTheme.typography.titleSmall,
+                            color = MaterialTheme.colorScheme.background
                         )
                     } ?: Text(
                         text = position.toString(),
-                        fontSize = 10.sp,
-                        color = Color.Black
-                    )
+                        style = MaterialTheme.typography.titleSmall,
+
+                        )
                 }
             }
         }
