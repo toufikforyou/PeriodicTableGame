@@ -39,6 +39,10 @@ git clone https://github.com/yourusername/PeriodicTableGame.git
 
 3. Build and run the application
 
+## Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](docs/CONTRIBUTING.md) for details on how to get started and our development process.
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.

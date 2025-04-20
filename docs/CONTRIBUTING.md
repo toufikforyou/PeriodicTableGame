@@ -7,27 +7,42 @@ We love your input! We want to make contributing to Periodic Table Game as easy 
 We use GitHub to host code, to track issues and feature requests, as well as accept pull requests.
 
 1. Fork the repo and create your branch from `main`
-2. Make your changes
-3. If you've added code that should be tested, add tests
-4. Ensure the test suite passes
-5. Make sure your code follows the project style guidelines
-6. Issue a pull request
+2. Make your changes following our guidelines
+3. Add tests for any new functionality
+4. Update documentation as needed
+5. Run all tests and ensure they pass
+6. Submit a pull request
 
 ## Code Style Guidelines
 
-- Follow the official Kotlin style guide
+### Kotlin Style
+
+- Follow the [official Kotlin coding conventions](https://kotlinlang.org/docs/coding-conventions.html)
 - Use meaningful variable and function names
 - Write comments for complex logic
 - Keep functions small and focused
 - Use composition over inheritance
-- Follow Material Design guidelines for UI components
 
-## Pull Request Process
+### Compose UI Guidelines
 
-1. Update the README.md with details of changes if applicable
-2. Update the CHANGELOG.md with notes on your changes
-3. The PR will be merged once you have the sign-off of at least one other developer
-4. Make sure all GitHub actions checks pass
+- Follow Material Design 3 principles
+- Use the existing color scheme and typography defined in the theme
+- Maintain consistent spacing using the provided modifiers
+- Reuse existing composable components when possible
+- Support both portrait and landscape orientations
+
+### Example Component Structure
+
+```kotlin
+@Composable
+fun GameComponent(
+    state: GameState,
+    onEvent: (GameEvent) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    // Component implementation
+}
+```
 
 ## Project Structure
 
@@ -36,15 +51,37 @@ app/
 ├── src/
 │   └── main/
 │       ├── java/dev/toufikforyou/periodictable/
-│       │   ├── di/          # Dependency injection
+│       │   ├── di/          # Dependency injection modules
 │       │   ├── main/
-│       │   │   ├── data/    # Data layer
-│       │   │   ├── domain/  # Domain layer
-│       │   │   ├── presentation/ # UI layer
-│       │   │   └── utils/   # Utility classes
+│       │   │   ├── data/    # Repository implementations
+│       │   │   ├── domain/  # Business logic, models
+│       │   │   ├── presentation/ # UI components, ViewModels
+│       │   │   └── utils/   # Helper classes, constants
 │       │   └── ui/          # Theme and styling
 │       └── res/             # Resources
 ```
+
+## Testing Guidelines
+
+- Write unit tests for ViewModels and Repository classes
+- Write UI tests for critical user flows
+- Use fake repositories for testing
+- Follow the given-when-then pattern for test structure
+
+## Issue Reporting
+
+When creating issues, please use the appropriate issue template:
+
+- Bug Report
+- Feature Request
+- UI Enhancement
+
+## Pull Request Process
+
+1. Update the README.md with details of significant changes
+2. Update the CHANGELOG.md with notes on your changes
+3. The PR will be merged once you have the sign-off of one reviewer
+4. All GitHub actions checks must pass
 
 ## License
 
