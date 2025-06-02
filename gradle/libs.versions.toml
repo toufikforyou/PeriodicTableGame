@@ -50,7 +50,7 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 
 [plugins]
-plugin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "plaginSerialization" }
+serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "plaginSerialization" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
